@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+#projects{
+  margin-top: 5rem;
+  text-align: center;
+
+}
 body{
     background-color: white;
     color:var(--main-color);
@@ -29,17 +34,22 @@ Header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
     /* color:Green; */
     border-bottom: 0.09px solid var(--accent-color) ;
 }
 .logo img{
-    width: 10vh;
+    width: 15vh;
 }
 .nav ul{
     display:flex;
-    gap:4rem;
+    gap:3rem;
     list-style-type: none;
+    justify-content: space-around;
+    
+}
+.nav ul li{
+  font-size: 1.5rem;
 }
 .nav ul li a{
     text-decoration: none;
@@ -51,8 +61,15 @@ Header{
     font-weight: 600;
 }
 .slogan{
-    font-size: 1.5rem;
-    color:black;
+    font-size: 3rem;
+    color:var(--light-green);
+    font-weight: 900;
+}
+.hero-text{
+  text-align: center;
+  font-size: 1.5rem;
+  width: 50vw;
+  color:black;
 }
 /* //////////////////////////////////// Hero Section Slideshow ////////////////////////////// */
 .hero {
@@ -87,14 +104,17 @@ Header{
   0% {
     background-image: url('./Images/bg1.jpg');
   }
-  33% {
-    background-image: url('./Images/bg2.jpg');
+  25% {
+    background-image: url('./Images/bg5.jpg');
   }
-  66% {
+  50% {
     background-image: url('./Images/bg3.jpg');
   }
+  75% {
+    background-image: url('./Images/bg4.jpg');
+  }
   100% {
-    background-image: url('./Images/bg1.jpg');
+    background-image: url('./Images/bg6.jpg');
   }
 }
 /* /////////////////////////////////////// END//////////////////////////////////////////////// */
@@ -111,6 +131,7 @@ Header{
     display:flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 10rem;
 
 }
 .service-card{
@@ -158,8 +179,8 @@ Header{
 }
 
 .service-icon {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   filter: brightness(0) invert(1); /* makes black icon white */
 }
 .service-card {
@@ -174,6 +195,7 @@ Header{
 }
 .service-card {
   margin: 20px 10px; /* horizontal spacing only */
+  font-size: 1.7rem;
 }
 
 .service-card:hover {
@@ -184,12 +206,12 @@ Header{
 
 .icon-wrapper {
   position: absolute;
-  top: -30px;
+  top: -70px;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--main-color);
-  width: 60px;
-  height: 60px;
+  width: 8.5rem;
+  height: 8.5rem;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -209,7 +231,7 @@ Header{
 }
 .callToAction{
     background-color: var(--main-color);
-    color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,12 +240,13 @@ Header{
     margin-top: 5rem;
     width: 100%;
     height: 60vh;
+    font-size: 1.5rem;
 
 }
 .callToAction img{
     flex: 7;
     /* width: 250px; */
-    border-radius: 3rem;
+
     opacity: calc(70%);
 }
 .imgage-box{
@@ -257,13 +280,14 @@ Header{
 }
 .aboutUsTitle{
     
-    font-size: 3rem;
+    font-size: 5rem;
     color:var(--main-color);
     transform: rotateZ(-90deg);
     text-wrap: nowrap;
 }
 .aboutUs p{
-  font-size: 1.5rem;
+  width: 50%;
+  font-size: 2rem;
   color: #339933;
 }
 .contact{
@@ -352,6 +376,42 @@ Header{
   transition: 0.3s ease;
 }
 
+footer{
+  border-top: 1px solid var(--light-blue);
+  text-align: center;
+}
+footer p{
+  font-size: 1rem;
+}
+
+/* Modal for Join Us Button */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
   /* ///////////////////////////////// */
 
   /* The Resposive CSS for Mobile Version */
@@ -372,9 +432,12 @@ Header{
   }
 
   .slogan {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-align: center;
     margin-top: 1rem;
+  }
+  .hero-text{
+    font-size: 1rem;
   }
 
   .hero {
@@ -420,7 +483,7 @@ Header{
 
   .aboutUsTitle {
     transform: rotate(0deg);
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .contact {
@@ -451,6 +514,33 @@ Header{
   .logo img {
     width: 60px;
   }
+  .icon-wrapper {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--main-color); /* or your desired color */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-card{
+  font-size: 1.2rem;
+}
+section .about-text{
+  font-size: 1rem;
+}
+.service-card img{
+  border-radius: none;
+}
+.service-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* makes black icon white */
+}
 }
 
 /* Hamburger hidden by default */

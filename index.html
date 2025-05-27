@@ -16,7 +16,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="*">Projects</a></li>
+            <li><a href="./projects.html">Projects</a></li>
             <li><a href="#about">About us</a></li>
         </ul>
          </section>
@@ -28,9 +28,13 @@
             <div class="bg bg2"></div>
             <div class="bg bg3"></div>
             <div class="bg bg4"></div>
+            <div class="bg bg5"></div>
+            <div class="bg bg6"></div>
         
-        <section class="slogan">Together for a Greener Planet and a Sustainable Future</section>
-        <section class="cta-btn btn"><button>Join us</button></section>
+        <section class="slogan">Empowring Youth For A Green Future In Afghanistan</section>
+        <p class="hero-text">Act for Climate is a youth-led, volunteer driven initiative based in Afghanistan. We are committed to raising awareness, building community resilience, and leading action against climate change and environmental challenges, especially plastic pollution.</p>
+        <!-- <section class="cta-btn btn"><button>Join us</button></section> -->
+        <section class="cta-btn btn"><button onclick="openModal()">Join Us</button></section>
     </section>
     <section class="services" id="services">
         <h1 class="title">Services</h1>
@@ -54,7 +58,7 @@
             <div class="icon-wrapper">
             <img src="./Images/Supporting Youth.png
             " class="service-icon" alt=""></div>
-            Supporting youth-led climate action projects
+            Supporting youth led climate action projects
         </section>
     </section>
     </section>
@@ -69,24 +73,23 @@
     </section>
     <section class="aboutUs" id="about">
         <h1 class="aboutUsTitle">About Us</h1>
-        <p>
-            ACT for Climate, founded by Ahmad Faiz Omari, is dedicated to tackling climate change in Afghanistan through education, research, and sustainable practices. The initiative focuses on raising awareness, strengthening resilience, and offering practical solutions to combat environmental challenges, particularly the growing issue of plastic waste. By engaging communities and promoting climate-conscious actions, ACT for Climate aims to empower individuals and foster change at a grassroots level.
-
-            With a passionate team of young volunteers, the organization creates training programs, collaborates with experts, and drives innovation in environmental research. Their long-term vision is to expand their network, inspire collective action, and contribute to a global sustainable future. Through continuous efforts, ACT for Climate seeks not only to mitigate the effects of climate change but also to encourage widespread participation in environmental protection.
+        <p class="about-text">
+            Act for Climate is a youth-led, volunteer-driven initiative based in Afghanistan, dedicated to addressing the urgent challenges of climate change through community-based action, education, research, and sustainable practices.
+We believe that climate solutions begin at the grassroots level. Our work focuses on raising public awareness, reducing plastic waste, building community resilience, and empowering young people to take environmental leadership in their own communities.
 
         </p>
     </section>
     <section class="contact">
-        <form class="contact-form">
+        <form class="contact-form" action="https://formsubmit.co/a4c.initiative@gmail.com" method="POST">
             <h2>Contact Us</h2>
             <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Enter name">
+            <input type="text" name="name" id="name" placeholder="Enter name" required>
         
             <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter email">
+            <input type="email" name="email" id="email" placeholder="Enter email" required>
         
             <label for="message">Message:</label>
-            <textarea id="message" placeholder="Enter message"></textarea>
+            <textarea id="message" name="message" placeholder="Enter message" required></textarea>
         
             <button type="submit">Submit</button>
           </form>
@@ -107,6 +110,42 @@
             <i class="fab fa-facebook-f"></i>
         </a>
 </div>
+<footer>
+    <p>Copyright &copy; 2025 - Ahmad Faisal Frogh. All right Reserved</p>
+</footer>
+
+<!-- Join Us Form -->
+
+
+<div id="joinUsModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form action="your-server-endpoint" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="purpose">Purpose of Joining:</label>
+            <select id="purpose" name="purpose" required>
+                <option value="financial_help">Financial Help</option>
+                <option value="training">Trainings</option>
+                <option value="volunteer">Volunteer Activity</option>
+            </select><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
+
+
+<!--  -->
 
 <script src="script.js"></script>
     

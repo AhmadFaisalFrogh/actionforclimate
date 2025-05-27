@@ -22,4 +22,22 @@
         });
     });
 });
+function openForm() {
+    document.getElementById("joinUsForm").style.display = "block";
+}
+
+function openModal() {
+    document.getElementById("joinUsModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("joinUsModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("joinUsModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
