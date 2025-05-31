@@ -96,7 +96,7 @@ Header{
   background-position: center;
   opacity: 0.3; /* adjust transparency */
   z-index: -1;
-  animation: bg-slide 15s infinite ease-in-out;
+  animation: bg-slide 25s infinite ease-in-out;
 }
 
 /* Animation keyframes for switching images */
