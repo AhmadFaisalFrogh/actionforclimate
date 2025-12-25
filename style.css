@@ -601,6 +601,7 @@ section .about-text{
     width: 90%;      /* Optional: makes cards look neat on mobile */
   }
 }
+
 /* Here is the styling for the REPORTS section.  */
 
 
@@ -665,7 +666,3 @@ section .about-text{
 .pdf-card {
   position: relative;
 }
-
-
-
-
