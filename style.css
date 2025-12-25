@@ -601,5 +601,71 @@ section .about-text{
     width: 90%;      /* Optional: makes cards look neat on mobile */
   }
 }
+/* Here is the styling for the REPORTS section.  */
+
+
+.pdf-section {
+  margin: 50px 0;
+}
+
+.pdf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pdf-card {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+}
+
+.pdf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* .pdf-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+} */
+
+.pdf-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #f4f4f4;
+}
+
+
+.pdf-card span {
+  display: block;
+  padding: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.pdf-card::after {
+  content: "PDF";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e63946;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+.pdf-card {
+  position: relative;
+}
+
+
 
 
